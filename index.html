@@ -35,12 +35,12 @@
     body{align-items:center;padding:24px 0;}
     .app{min-height:auto;height:auto;border-radius:26px;box-shadow:var(--shadow);}
   }
-
+ 
   /* ---------- screens ---------- */
   .screen{display:none;flex-direction:column;flex:1;animation:fade .45s ease both;}
   .screen.active{display:flex;}
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
+ 
   /* ---------- intro ---------- */
   .hero{
     background:
@@ -59,7 +59,7 @@
   .meta{display:flex;gap:8px;flex-wrap:wrap;}
   .chip{font-size:.82rem;font-weight:600;color:var(--royal);background:var(--ice);
         padding:7px 13px;border-radius:999px;}
-
+ 
   /* stage preview / track */
   .track{margin:26px 0 4px;}
   .track-row{display:flex;align-items:flex-start;justify-content:space-between;position:relative;}
@@ -73,9 +73,9 @@
   .node.on .dot{transform:scale(1.45);border-color:var(--cur);background:var(--cur);
     box-shadow:0 0 0 6px color-mix(in srgb,var(--cur) 18%,transparent);}
   .node.on .nlab{color:var(--cur);}
-
+ 
   .track-cap{font-size:.82rem;color:var(--muted);margin-top:18px;text-align:center;}
-
+ 
   .grow{flex:1;}
   .btn{
     appearance:none;border:0;cursor:pointer;font-family:inherit;
@@ -86,11 +86,11 @@
   .btn:hover{background:#000c86;}
   .btn:active{transform:translateY(1px);}
   .btn:focus-visible{outline:3px solid var(--lblue);outline-offset:2px;}
-
+ 
   .tagline{text-align:center;font-size:.66rem;letter-spacing:.22em;color:#aeb6cd;
     font-weight:700;margin-top:20px;}
   .made{text-align:center;font-size:.72rem;color:#9aa2bd;margin-top:8px;}
-
+ 
   /* ---------- questions ---------- */
   .qhead{padding:20px 22px 0;}
   .qtop{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;
@@ -121,7 +121,7 @@
   .back{background:none;border:0;color:var(--muted);font-size:.92rem;font-weight:600;
     cursor:pointer;padding:14px;align-self:center;font-family:inherit;}
   .back:focus-visible{outline:2px solid var(--lblue);outline-offset:2px;border-radius:6px;}
-
+ 
   /* ---------- result ---------- */
   .rhero{background:linear-gradient(160deg,#0c0570,var(--navy) 62%,#06023f);
     color:#fff;padding:30px 26px 30px;position:relative;overflow:hidden;}
@@ -134,13 +134,13 @@
     padding:8px 15px;border-radius:999px;}
   .scorechip b{font-size:1.5rem;font-weight:800;color:var(--lime);}
   .scorechip span{font-size:.85rem;color:#c4cdec;}
-
+ 
   .rbody{padding:24px 22px 26px;}
   .r-track{margin:6px 0 22px;}
   .r-msg{font-size:1.06rem;color:var(--text);line-height:1.62;
     background:#fff;}
   .r-msg .hl{color:var(--royal);font-weight:700;}
-
+ 
   .move{margin-top:24px;background:linear-gradient(160deg,#F4F8FF,#EAF1FF);
     border:1.5px solid var(--bl2);border-radius:var(--r);padding:20px 20px 8px;}
   .move-h{display:flex;align-items:center;gap:9px;font-size:.96rem;font-weight:800;color:var(--navy);}
@@ -156,7 +156,7 @@
   .check.done .box svg{opacity:1;transform:scale(1);}
   .check .ctxt{font-size:1.04rem;font-weight:600;color:var(--navy);}
   .check.done .ctxt{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--bl2);}
-
+ 
   .foot{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);text-align:center;}
   .foot p{color:var(--muted);font-size:.95rem;line-height:1.6;}
   .foot .contact{margin-top:12px;font-weight:700;color:var(--navy);font-size:1rem;}
@@ -166,7 +166,7 @@
     font-family:inherit;transition:.18s;}
   .restart:hover{border-color:var(--blue);color:var(--blue);}
   .restart:focus-visible{outline:3px solid var(--lblue);outline-offset:2px;}
-
+ 
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important;transition:none !important;}
   }
@@ -174,7 +174,7 @@
 </head>
 <body>
 <div class="app">
-
+ 
   <!-- ===== INTRO ===== -->
   <section class="screen active" id="screen-intro">
     <div class="hero">
@@ -188,7 +188,7 @@
         <span class="chip">약 1분</span>
         <span class="chip">바로 결과 확인</span>
       </div>
-
+ 
       <div class="track" aria-hidden="true">
         <div class="track-row">
           <div class="track-line"></div>
@@ -199,14 +199,14 @@
         </div>
         <p class="track-cap">네 단계 중 우리 회사가 어디에 있는지 확인합니다.</p>
       </div>
-
+ 
       <div class="grow"></div>
       <button class="btn" id="startBtn">진단 시작하기</button>
       <div class="tagline">DO EVERYTHING IN LOVE</div>
       <p class="made">이 진단 도구도 외주 없이 가인지가 직접 만들었습니다.</p>
     </div>
   </section>
-
+ 
   <!-- ===== QUESTIONS ===== -->
   <section class="screen" id="screen-q">
     <div class="qhead">
@@ -220,7 +220,7 @@
       <button class="back" id="backBtn" hidden>← 이전 질문</button>
     </div>
   </section>
-
+ 
   <!-- ===== RESULT ===== -->
   <section class="screen" id="screen-r">
     <div class="rhero">
@@ -240,9 +240,9 @@
           <div class="node" data-i="3"><div class="dot"></div><div class="nlab">변혁</div></div>
         </div>
       </div>
-
+ 
       <p class="r-msg" id="rMsg"></p>
-
+ 
       <div class="move">
         <div class="move-h"><span class="tag">이번 주</span> 딱 세 가지만 하세요</div>
         <div class="check" role="button" tabindex="0">
@@ -258,19 +258,19 @@
           <span class="ctxt" id="move3"><b>4주</b> 동안 작게 실험하고 회고하기</span>
         </div>
       </div>
-
+ 
       <div class="foot">
         <p>이 화면을 캡처해서 가져가세요.<br>해보다가 막히는 지점이 생기면, 그때 편하게 찾아주세요.</p>
         <p class="contact">가인지컨설팅그룹 · 남요셉<br><span class="mail">tyler@gainge.com</span> · 010-7551-5553</p>
       </div>
-
+ 
       <button class="restart" id="restartBtn">처음부터 다시 진단하기</button>
       <div class="tagline" style="margin-top:18px">DO EVERYTHING IN LOVE</div>
     </div>
   </section>
-
+ 
 </div>
-
+ 
 <script>
 (function(){
   "use strict";
@@ -298,10 +298,10 @@
      move3:"<b>4주</b> 동안 실험해 <b>첫 결과물 하나</b> 내고 회고하기"},
     {name:"확산", sub:"선발대가 작동 중입니다", color:"#1DB17F",
      msg:"선발대가 움직이고 있네요. 다음은 한두 명을 넘어 <span class='hl'>조직이 함께 배우는 자리</span>를 만드는 단계입니다. 성공을 문화로 번지게 할 차례예요.",
-     move3:"그 4주 실험을 <b>다른 팀 한 곳에 확산</b>하고 회고하기"},
+     move3:"우리 팀의 <b>AI 활용 경험</b>을 <b>다른 팀에 전파</b>하기"},
     {name:"변혁", sub:"시스템을 바꾸는 중입니다", color:"#09035E",
      msg:"단순 효율화를 넘어 <span class='hl'>프로세스·시스템 자체</span>를 바꾸는 단계까지 오셨습니다. 내·외부 전문가와 병행하며 본격적으로 밀어붙일 때입니다.",
-     move3:"그 4주 실험을 <b>프로세스·시스템 개선 과제</b>로 회고하기"}
+     move3:"이 과제를 <b>프로세스·시스템 개선</b>으로 <b>4주</b> 실험하기"}
   ];
   function stageIndex(score){
     if(score<=4) return 0;
@@ -309,7 +309,7 @@
     if(score<=12) return 2;
     return 3;
   }
-
+ 
   var answers = new Array(QUESTIONS.length).fill(null);
   var cur = 0;
   var $ = function(id){return document.getElementById(id);};
@@ -319,7 +319,7 @@
     window.scrollTo(0,0);
     if(screens[name]) screens[name].scrollTop = 0;
   }
-
+ 
   // build answer buttons once
   var answersEl = $("answers");
   function renderQuestion(){
@@ -353,7 +353,7 @@
   $("backBtn").addEventListener("click", function(){
     if(cur>0){ cur--; renderQuestion(); }
   });
-
+ 
   function finish(){
     var score = answers.reduce(function(a,b){return a+(b||0);},0);
     var si = stageIndex(score);
@@ -363,7 +363,7 @@
     $("rDesc").textContent = st.sub;
     $("rMsg").innerHTML = st.msg;
     $("move3").innerHTML = st.move3;
-
+ 
     // result track highlight
     var nodes = screens.r.querySelectorAll(".node");
     nodes.forEach(function(n){
@@ -371,7 +371,7 @@
       n.classList.toggle("on", on);
       if(on) n.style.setProperty("--cur", st.color);
     });
-
+ 
     show("r");
     // count-up score
     var target = score, c = 0;
@@ -385,7 +385,7 @@
     };
     if(target>0) requestAnimationFrame(step);
   }
-
+ 
   // checklist toggles
   Array.prototype.forEach.call(document.querySelectorAll(".check"), function(c){
     var toggle = function(){ c.classList.toggle("done"); };
@@ -394,16 +394,17 @@
       if(e.key===" "||e.key==="Enter"){ e.preventDefault(); toggle(); }
     });
   });
-
+ 
   $("startBtn").addEventListener("click", function(){ cur=0; renderQuestion(); show("q"); });
   $("restartBtn").addEventListener("click", function(){
     answers = new Array(QUESTIONS.length).fill(null); cur=0;
     document.querySelectorAll(".check.done").forEach(function(c){c.classList.remove("done");});
     show("intro");
   });
-
+ 
   renderQuestion();
 })();
 </script>
 </body>
 </html>
+ 
