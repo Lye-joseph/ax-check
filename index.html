@@ -18,22 +18,22 @@
     font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-  html,body{height:100%;}
+  html{height:100%;}
   body{
+    min-height:100%;
     background:#F3F6FC;
     color:var(--text);
     line-height:1.5;
-    display:flex;justify-content:center;
     padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
   }
   .app{
-    width:100%;max-width:460px;min-height:100dvh;
-    background:var(--white);position:relative;overflow:hidden;
+    width:100%;max-width:460px;margin:0 auto;min-height:100dvh;
+    background:var(--white);position:relative;
     display:flex;flex-direction:column;
   }
   @media(min-width:480px){
-    body{align-items:center;padding:24px 0;}
-    .app{min-height:auto;height:auto;border-radius:26px;box-shadow:var(--shadow);}
+    body{padding:24px 0;}
+    .app{min-height:auto;border-radius:26px;box-shadow:var(--shadow);overflow:hidden;}
   }
 
   /* ---------- screens ---------- */
@@ -203,7 +203,7 @@
       <div class="grow"></div>
       <button class="btn" id="startBtn">진단 시작하기</button>
       <div class="tagline">DO EVERYTHING IN LOVE</div>
-      <p class="made">이 진단 도구도 외주 없이 가인지가 직접 만들었습니다.</p>
+      <p class="made">Made by Gainge</p>
     </div>
   </section>
 
